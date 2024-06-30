@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    /* Perbesar lebar container */
+    position: relative;
+}
+
+.coin-input {
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    width: 150px;
+    /* Perbesar ukuran kartu */
+    height: 200px;
+    /* Perbesar ukuran kartu */
+    background-color: #ccc;
+    border: 2px solid #999;
+    border-radius: 8px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-image 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.card img {
+    display: none;
+    /* Sembunyikan gambar pada awalnya */
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+#play-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+#play-button:hover {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+#play-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.question {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.shuffling {
+    animation: shuffle 0.5s infinite;
+}
+
+@keyframes shuffle {
+    0% {
+        transform: rotateY(0);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-btn img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.close-btn img:hover {
+    transform: scale(1.1);
+}
+
+.js #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFF;
+    z-index: 199;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.js #preloader .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.js body.loaded #preloader {
+    -webkit-transform: scale(.6) translateY(-100%);
+    -moz-transform: scale(.6) translateY(-100%);
+    -ms-transform: scale(.6) translateY(-100%);
+    -o-transform: scale(.6) translateY(-100%);
+    transform: scale(.6) translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.no-js #preloader {
+    display: none;
+}
+
+#wrapper {
+    overflow-x: hidden;

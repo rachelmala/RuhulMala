@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class='no-js'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Guessing Game</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/ionicons.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/owl.carousel.css'>
+    <link rel='stylesheet' type='text/css' href='css/owl.theme.css'>
+    <link rel='stylesheet' type='text/css' href='css/owl.transitions.css'>
+    <link rel='stylesheet' type='text/css' href='css/color-default.css'>
+</head>
+
+<body>
+
+        <!--preloader-->
+        <div id='preloader'>
+        
+            <div class='loader'>
+                <img src='img/load.gif' alt='symp'>
+            </div>
+        
+        </div>
+        <!--/preloader-->
+<div id='wrapper'>
+        <div class="game-container">
+            <div class='close-btn'>
+                <a href="index.html#front-section">
+                    <img src="img/corner-down-left.svg" alt="Close" />
+                </a>
+            </div>
+            <h1>Card Guessing Game</h1>
+            <div class="coin-input">
+                <label for="coins">Enter Coins: </label>
+                <input type="number" id="coins" min="1" max="100">
+            </div>
+            <button id="play-button">Play</button>
+            <div class="question">
+                <p>Mana gambar Taurus yang benar?</p>
+            </div>
+            <div class="cards-container">
+                <div class="card" id="card1"></div>
+
+                <div class="card" id="card2"></div>
+            </div>
+            <div class="result">
+                <p id="message"></p>
+                <p id="total-coins">Your Coins: 250</p>
+            </div>
+        </div>
+    
+</div>
+<script src='js/jquery.min.js'></script>
+<script src='js/jquery.stellar.min.js'></script>
+<script src='js/modernizr.js'></script>
+<script src='js/owl.carousel.min.js'></script>
+<script src='js/jquery.shuffle.min.js'></script>
+<script src='js/jquery.magnific-popup.min.js'></script>
+<script src='js/validator.min.js'></script>
+<script src='js/smoothscroll.js'></script>
+<script src='js/script.js'></script>
+<script src="js/game.js"></script>
+</body>
+
+</html>
